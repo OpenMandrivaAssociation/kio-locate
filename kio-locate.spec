@@ -1,7 +1,7 @@
 Summary: 	kio-locate
 Name: 		kio-locate
 Version: 	0.5.1
-Release: 	%mkrel 2
+Release: 	%mkrel 3
 Source:		http://kde-apps.org/CONTENT/content-files/120965-kio-locate-%{version}.tar.gz
 License: 	GPLv2+
 Group: 		Graphical desktop/KDE
@@ -12,17 +12,12 @@ BuildRequires:  kdelibs4-devel
 %description
 This is kio-locate for KDE4.
 
-%files
+%files -f kio_locate.lang
 %defattr(-,root,root)
 %{_kde_libdir}/kde4/*.so
 %{_kde_docdir}/HTML/en/kioslave/kio-locate/*
-#%{_kde_appsdir}/kio_locate
-%{_kde_services}/*
-
-%{_kde_datadir}/locale/cs/LC_MESSAGES/kio_locate.mo
-%{_kde_datadir}/locale/de/LC_MESSAGES/kio_locate.mo
-%{_kde_datadir}/locale/el/LC_MESSAGES/kio_locate.mo
-%{_kde_datadir}/locale/fr/LC_MESSAGES/kio_locate.mo
+%{_kde_services}/*.protocol
+%{_kde_services}/searchproviders/*.desktop
 #--------------------------------------------------------------------
 
 %prep
@@ -35,6 +30,8 @@ This is kio-locate for KDE4.
 %install
 rm -rf %{buildroot}
 %makeinstall_std -C build
+
+%find_lang kio_locate
 
 %clean
 rm -rf $RPM_BUILD_ROOT
