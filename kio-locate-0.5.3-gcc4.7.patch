@@ -1,0 +1,12 @@
+diff -urN kio-locate-0.5.3/locater.h kio-locate-0.5.3-patched/locater.h
+--- kio-locate-0.5.3/locater.h	2010-03-20 19:05:46.000000000 +1000
++++ kio-locate-0.5.3-patched/locater.h	2012-11-13 01:04:35.060894401 +1100
+@@ -34,7 +34,7 @@
+ #include <QObject>
+ #include <QStringList>
+ #include <KProcess>
+-
++#include <unistd.h>
+ 
+ /**
+  * Interface to the locate command.
