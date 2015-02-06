@@ -1,7 +1,7 @@
 Summary:	Locate KIO slave for KDE4
 Name:		kio-locate
 Version:	0.5.3
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 URL:		http://kde-apps.org/content/show.php/kio-locate?content=120965
