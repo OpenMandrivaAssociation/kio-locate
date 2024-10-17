@@ -4,7 +4,7 @@ Version:	0.5.3
 Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-URL:		http://kde-apps.org/content/show.php/kio-locate?content=120965
+URL:		https://kde-apps.org/content/show.php/kio-locate?content=120965
 Source0:	http://kde-apps.org/CONTENT/content-files/120965-kio-locate-%{version}.tar.gz
 Patch0:		kio-locate-0.5.3-gcc4.7.patch
 BuildRequires:	kdelibs4-devel
